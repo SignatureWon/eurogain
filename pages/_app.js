@@ -3,8 +3,8 @@ import { MantineProvider } from "@mantine/core";
 import "../styles/globals.css";
 import { useRouter } from "next/router";
 import LayoutManage from "@/components/manage/Layout";
-import LayoutAdmin from "@/components/Admin/Layout";
-import LayoutUser from "@/components/User/Layout";
+import LayoutAdmin from "@/components/admin/Layout";
+import LayoutUser from "@/components/user/Layout";
 
 export default function App(props) {
   const { Component, pageProps } = props;
