@@ -1,26 +1,58 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+h1 {
+  @apply font-bold text-2xl
+}
+h2 {
+  @apply font-semibold text-lg
+}
+/* html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+} */
+
+::-webkit-scrollbar {
+  @apply w-4
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-200 rounded-full border-4 border-solid border-transparent bg-clip-content
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dark-300
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.tabs-pilled button {
+  @apply pt-1 pb-2 px-4
+}
+.tabs-pilled button[data-active] {
+  @apply bg-brand-500 text-white
 }
 
-* {
-  box-sizing: border-box;
+.eg-form {
+  @apply p-4 mt-4 bg-white border border-gray-200
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.eg-form h2 {
+  @apply pb-4
+}
+.eg-form article {
+  @apply divide-y divide-gray-300
+}
+.eg-form .field {
+  @apply py-4 md:flex items-center
+}
+.eg-form .label {
+  @apply w-40 text-gray-600 text-sm
+}
+.eg-form .value {
+  @apply flex-1 max-w-lg
 }
